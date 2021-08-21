@@ -63,10 +63,6 @@ pygeoogc==0.11.1
 pygeoutils==0.11.2
 pynhd==0.11.1
 pyproj==3.1.0
-PyQt5==5.12.3
-PyQt5_sip==4.19.18
-PyQtChart==5.12
-PyQtWebEngine==5.12.1
 python-editor==1.0.4
 python-forge==18.6.0
 python-slugify==5.0.2
