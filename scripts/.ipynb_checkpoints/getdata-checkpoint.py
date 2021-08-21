@@ -1,37 +1,36 @@
-
-import pdal
 import json
-                                                                                                            
+import pdal
 
-data_path = "https://s3-us-west-2-amazonaws.com/usgs-lidar-public"
-region = 'USGS_LPC_CO_SoPlatteRiver_Lot5_2013_LAS_2015/'
-bound = "([-93.756155, 41.918015, -93.747334, 41.921429])"
-public_access_path = data_path + region + "ept.json"
-output_flename_laz = "laz/SoPlatteRiver.laz"
-output_flename_tif = "tif/SoPlatteRiver.tif"
-pipline_path = "get_data.json"
-
-#region and boundary
-output_flename_laz = "laz/SoPlatteRiver.laz"
-def get_raster_terrain(bounds:str,region:str, PUBLIC_ACCESS_PATH:str = public_access_path ,OUTPUT_FILENAME_LAZ:str =                                        output_flename_laz,
-                    OUTPUT_FILENAME_TIF:str = output_flename_tif ,PIPLINE_PATH:str =pipline_path )->None:
-
-    with open(PIPLINE_PATH) as json_file:
-        the_json = json.load(json_file)
-
-    the_json['pipline'][0]['bounds']= bounds
-    the_json['pipline'][0]['filename']= PUBLIC_ACCESS_PATH
-    the_json['pipline'][3]['filename']= OUTPUT_FILENAME_LAZ
-    the_json['pipline'][4]['filename']= OUTPUT_FILENAME_TIF
-
-    pipline = pdal.pipline(json.dumps(the_json))
-
-    try:
-        pipe_exec = pipline.execute()
-        metadata=pipline.metadata
-    except RuntimeError as e:
-        print(e)
+REGION = "IA_FullState"
+BOUND = "([-10424171.940, -10423171.940], [5165494.710, 5166494.710])"
+PUBLIC_DATA_PATH = "https://s3-us-west-2.amazonaws.com/usgs-lidar-public/"
+PIPELINE_PATH = "/mnt/10ac-batch-4/all-notebooks/euel_fantaye/AgriTech---USGS-LIDAR-Challenge/scripts/getdata.json"
 
 
-    if name== "main":
-        get_raster_terrain(bounds=bound,region = region)
+def get_raster_terrain(
+    bounds: str = BOUND,
+    regions: str = REGION,
+    output_filename: str = "temp",
+    public_access_path: str = PUBLIC_DATA_PATH,
+) -> None:
+  with open(PIPELINE_PATH) as js:
+    pipe = json.load(js)
+
+  pipe['pipeline'][0]['bounds'] = bounds
+  pipe['pipeline'][0]['filename'] = public_access_path + regions + "/ept.json"
+  pipe['pipeline'][3]['filename'] = "../data/laz/" + output_filename + ".laz"
+  pipe['pipeline'][4]['filename'] = "../data/tif/" + output_filename + ".tif"
+
+  pl = pdal.Pipeline(json.dumps(pipe))
+
+  try:
+    pl.execute()
+    metadata = pl.metadata
+    print('metadata: ', metadata)
+    log = pl.log
+    print("logs: ", log)
+  except RuntimeError as e:
+    print(e)
+
+
+get_raster_terrain()
