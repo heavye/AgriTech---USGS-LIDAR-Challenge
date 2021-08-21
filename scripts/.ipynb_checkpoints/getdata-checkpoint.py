@@ -11,8 +11,7 @@ def get_raster_terrain(
     bounds: str = BOUND,
     regions: str = REGION,
     output_filename: str = "temp",
-    public_access_path: str = PUBLIC_DATA_PATH,
-) -> None:
+    public_access_path: str = PUBLIC_DATA_PATH,) -> None:
   with open(PIPELINE_PATH) as js:
     pipe = json.load(js)
 

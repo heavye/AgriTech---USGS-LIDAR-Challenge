@@ -1,0 +1,55 @@
+21-08-2021 16:24:23 - [ERROR] -  file_handler - (file_handler.py).read_json(line 35) - File not found.
+Traceback (most recent call last):
+  File "/mnt/10ac-batch-4/all-notebooks/euel_fantaye/AgriTech---USGS-LIDAR-Challenge/scripts/file_handler.py", line 29, in read_json
+    with open(json_path) as js:
+FileNotFoundError: [Errno 2] No such file or directory: './get_data.json'
+21-08-2021 16:25:41 - [ERROR] -  file_handler - (file_handler.py).read_json(line 35) - File not found.
+Traceback (most recent call last):
+  File "/mnt/10ac-batch-4/all-notebooks/euel_fantaye/AgriTech---USGS-LIDAR-Challenge/scripts/file_handler.py", line 29, in read_json
+    with open(json_path) as js:
+FileNotFoundError: [Errno 2] No such file or directory: '../get_data.json'
+21-08-2021 16:26:33 - [ERROR] -  file_handler - (file_handler.py).read_json(line 35) - File not found.
+Traceback (most recent call last):
+  File "/mnt/10ac-batch-4/all-notebooks/euel_fantaye/AgriTech---USGS-LIDAR-Challenge/scripts/file_handler.py", line 29, in read_json
+    with open(json_path) as js:
+FileNotFoundError: [Errno 2] No such file or directory: 'AgriTech---USGS-LIDAR-Challenge/scripts/getdata.json'
+21-08-2021 16:27:31 - [ERROR] -  file_handler - (file_handler.py).read_json(line 35) - File not found.
+Traceback (most recent call last):
+  File "/mnt/10ac-batch-4/all-notebooks/euel_fantaye/AgriTech---USGS-LIDAR-Challenge/scripts/file_handler.py", line 29, in read_json
+    with open(json_path) as js:
+FileNotFoundError: [Errno 2] No such file or directory: '/mnt/10ac-batch-4/all-notebooks/euel_fantaye/AgriTech---USGS-LIDAR-Challenge/scripts/AgriTech---USGS-LIDAR-Challenge/scripts/getdata.json'
+21-08-2021 16:27:50 - [ERROR] -  file_handler - (file_handler.py).read_json(line 35) - File not found.
+Traceback (most recent call last):
+  File "/mnt/10ac-batch-4/all-notebooks/euel_fantaye/AgriTech---USGS-LIDAR-Challenge/scripts/file_handler.py", line 29, in read_json
+    with open(json_path) as js:
+FileNotFoundError: [Errno 2] No such file or directory: './mnt/10ac-batch-4/all-notebooks/euel_fantaye/AgriTech---USGS-LIDAR-Challenge/scripts/AgriTech---USGS-LIDAR-Challenge/scripts/getdata.json'
+21-08-2021 16:28:38 - [ERROR] -  file_handler - (file_handler.py).read_json(line 35) - File not found.
+Traceback (most recent call last):
+  File "/mnt/10ac-batch-4/all-notebooks/euel_fantaye/AgriTech---USGS-LIDAR-Challenge/scripts/file_handler.py", line 29, in read_json
+    with open(json_path) as js:
+FileNotFoundError: [Errno 2] No such file or directory: '/getdata.json'
+21-08-2021 16:29:48 - [ERROR] -  file_handler - (file_handler.py).read_json(line 35) - File not found.
+Traceback (most recent call last):
+  File "/mnt/10ac-batch-4/all-notebooks/euel_fantaye/AgriTech---USGS-LIDAR-Challenge/scripts/file_handler.py", line 29, in read_json
+    with open(json_path) as js:
+FileNotFoundError: [Errno 2] No such file or directory: '/getdata.json'
+21-08-2021 16:30:07 - [INFO] -  file_handler - (file_handler.py).read_json(line 31) - Json file read from ./getdata.json.
+21-08-2021 16:30:10 - [ERROR] -  __main__ - (fetch.py).run_pipeline(line 64) - Pipeline execution failed
+Traceback (most recent call last):
+  File "/mnt/10ac-batch-4/all-notebooks/euel_fantaye/AgriTech---USGS-LIDAR-Challenge/scripts/fetch.py", line 60, in run_pipeline
+    pipeline.execute()
+  File "/opt/miniconda/lib/python3.9/site-packages/pdal/pipeline.py", line 40, in execute
+    return self.p.execute()
+  File "libpdalpython.pyx", line 180, in pdal.libpdalpython.PyPipeline.execute
+RuntimeError: writers.las: Couldn't open file '../data/laz/temp.laz' for output.
+21-08-2021 16:32:28 - [INFO] -  file_handler - (file_handler.py).read_json(line 31) - Json file read from ./getdata.json.
+21-08-2021 16:32:31 - [ERROR] -  __main__ - (fetch.py).run_pipeline(line 64) - Pipeline execution failed
+Traceback (most recent call last):
+  File "/mnt/10ac-batch-4/all-notebooks/euel_fantaye/AgriTech---USGS-LIDAR-Challenge/scripts/fetch.py", line 60, in run_pipeline
+    pipeline.execute()
+  File "/opt/miniconda/lib/python3.9/site-packages/pdal/pipeline.py", line 40, in execute
+    return self.p.execute()
+  File "libpdalpython.pyx", line 180, in pdal.libpdalpython.PyPipeline.execute
+RuntimeError: writers.gdal: Unable to open GDAL datasource '../data/tif/temp.tif'.
+21-08-2021 16:33:18 - [INFO] -  file_handler - (file_handler.py).read_json(line 31) - Json file read from ./getdata.json.
+21-08-2021 16:33:22 - [INFO] -  __main__ - (fetch.py).run_pipeline(line 61) - Pipeline executed successfully.
