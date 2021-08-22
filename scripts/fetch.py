@@ -9,6 +9,9 @@ from app_logger import App_Logger
 from file_handler import FileHandler
 
 class Fetch3depData:
+    '''
+    This is a class fof fetching 3DEP data
+    '''
 
     def __init__(self, public_data_url = "https://s3-us-west-2.amazonaws.com/usgs-lidar-public/", pipeline_json_path="./getdata.json") -> None:
         self.logger = App_Logger().get_logger(__name__)
