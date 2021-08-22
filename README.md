@@ -19,9 +19,7 @@
 ![workflow](https://github.com/heavye/AgriTech---USGS-LIDAR-Challenge/actions/workflows/cml.yaml/badge.svg)
 [![Build Status](https://app.travis-ci.com/heavye/AgriTech---USGS-LIDAR-Challenge.svg?branch=main)](https://app.travis-ci.com/heavye/AgriTech---USGS-LIDAR-Challenge)
 
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+
 
 
 
@@ -76,7 +74,9 @@
   </ol>
 </details>
 
-
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
@@ -112,14 +112,6 @@ Resoures that used in this project are :
 ## Getting Started
 
 You can get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
 
 ### Installation
 
