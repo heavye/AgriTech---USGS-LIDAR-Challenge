@@ -18,6 +18,7 @@
 ![workflow](https://github.com/heavye/AgriTech---USGS-LIDAR-Challenge/actions/workflows/codeql-analysis.yml/badge.svg)
 ![workflow](https://github.com/heavye/AgriTech---USGS-LIDAR-Challenge/actions/workflows/cml.yaml/badge.svg)
 [![Build Status](https://app.travis-ci.com/heavye/AgriTech---USGS-LIDAR-Challenge.svg?branch=main)](https://app.travis-ci.com/heavye/AgriTech---USGS-LIDAR-Challenge)
+
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
