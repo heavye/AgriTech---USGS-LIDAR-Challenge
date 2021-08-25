@@ -1,5 +1,5 @@
 import json
-
+import pdal
 
 REGION = "IA_FullState"
 BOUND = "([-10424171.940, -10423171.940], [5165494.710, 5166494.710])"
@@ -12,6 +12,20 @@ def get_raster_terrain(
     regions: str = REGION,
     output_filename: str = "temp",
     public_access_path: str = PUBLIC_DATA_PATH,) -> None:
+  
+    """Get data from s3 API.
+
+        Args:
+            bounds: the boundary for the location.
+            regions: the region the location found.
+            output_filename: the output filename the function returns to.
+            public_access_path: the public url the data is found on s3 server.
+        Returns:
+            the json file.
+        Raises:
+            RuntimeError: if something goes wrong.    
+    """
+
   with open(PIPELINE_PATH) as js:
     pipe = json.load(js)
 
