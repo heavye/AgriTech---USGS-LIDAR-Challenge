@@ -11,6 +11,16 @@ from file_handler import FileHandler
 class Fetch3depData:
     '''
     This is a class fof fetching 3DEP data
+    
+        Args:
+            bounds: the boundary for the location.
+            regions: the region the location found.
+            output_filename: the output filename the function returns to.
+            public_access_path: the public url the data is found on s3 server.
+        Returns:
+            the json file.
+        Raises:
+            RuntimeError: if something goes wrong.    
     '''
 
     def __init__(self, public_data_url = "https://s3-us-west-2.amazonaws.com/usgs-lidar-public/", pipeline_json_path="./getdata.json") -> None:
